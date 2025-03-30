@@ -16,23 +16,7 @@
     font-size: 13px;
 }
 
-.discord{
-    margin-bottom: 50px;
-    cursor: pointer;
-    position: relative;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 50px;
-    background-color: #0d93ec;
-    border-radius: 10px;
-    transition: 200ms;
-    margin-top: -5px;
-    box-shadow: 0px 0px 20px rgb(153, 153, 153);
-}
 
-.discord:hover{
-    opacity: 0.5;
 }
 
 .inner_grid{
@@ -51,22 +35,7 @@
     margin-right: auto;
 }
 
-.discord_text{
-    margin-top: auto;
-    margin-bottom: auto;
-    color: white;
-    height: max-content;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    line-height: 50px;
-}
-
-.discord_image{
-    width: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 10px;
+;
 }
 
 html{
@@ -598,4 +567,28 @@ a {
 .button {
     background-color: #333;
     color: white;
+}
+.discord {
+    display: inline-block; /* Sprawia, że kontener jest na jednej linii */
+    cursor: pointer; /* Kursor wskazuje, że jest to klikalne */
+    width: 100%; /* Dopasowuje szerokość do zawartości */
+    height: auto; /* Wysokość będzie zależna od GIF-a */
+    background: none; /* Usuwa tło */
+    border: none; /* Usuwa ewentualne obramowanie */
+    text-align: center; /* Wyśrodkowuje zawartość */
+}
+
+.discord .inner_grid {
+    width: 100%; /* Dopasowuje szerokość kontenera do zawartości */
+    display: flex; /* Flexbox do wyśrodkowania obrazka */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
+}
+
+.discord img {
+    max-width: 100%; /* Maksymalna szerokość GIF-a do 100% szerokości kontenera */
+    height: auto; /* Zachowanie proporcji GIF-a */
+}
+
+.discord_text {
+    display: none; /* Ukrywa tekst */
 }
