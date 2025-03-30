@@ -582,3 +582,14 @@ input:focus{
     }
 
 }
+/* Domyślnie motyw jasny */
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Motyw ciemny */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
