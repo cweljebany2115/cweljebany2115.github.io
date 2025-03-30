@@ -153,3 +153,31 @@
     <script src="assets/index.js"></script>
     <script src="assets/manifest.js"></script>
 </body>
+<script>
+        // Dodajemy JavaScript do zmiany motywu
+        const themeToggleButton = document.getElementById("theme-toggle");
+        const currentTheme = localStorage.getItem("theme");
+
+        if (currentTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            themeToggleButton.textContent = "Jasny motyw"; // Zmieniamy tekst przycisku
+        }
+
+        // Funkcja zmieniająca motyw
+        themeToggleButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+
+            // Zapisujemy wybrany motyw w localStorage
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+                themeToggleButton.textContent = "Jasny motyw"; // Zmieniamy tekst przycisku
+            } else {
+                localStorage.setItem("theme", "light");
+                themeToggleButton.textContent = "Ciemny motyw"; // Zmieniamy tekst przycisku
+            }
+        });
+    </script>
+
+    <script src="assets/index.js"></script>
+    <script src="assets/manifest.js"></script>
+</body>
