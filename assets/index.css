@@ -581,15 +581,21 @@ input:focus{
         rotate: 360deg;
     }
 
-}
-/* Domyślnie motyw jasny */
 body {
-    background-color: white;
-    color: black;
+    background-color: #121212;
+    color: white;
 }
 
-/* Motyw ciemny */
-body.dark-mode {
-    background-color: #121212;
+/* Możesz także dostosować inne elementy, jak np. nagłówki czy linki */
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+a {
+    color: #f1f1f1;
+}
+
+.button {
+    background-color: #333;
     color: white;
 }
