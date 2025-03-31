@@ -569,26 +569,41 @@ a {
     color: white;
 }
 .discord {
-    display: inline-block; /* Sprawia, że kontener jest na jednej linii */
-    cursor: pointer; /* Kursor wskazuje, że jest to klikalne */
-    width: 100%; /* Dopasowuje szerokość do zawartości */
-    height: auto; /* Wysokość będzie zależna od GIF-a */
+    display: flex; /* Flexbox do lepszego zarządzania */
+    justify-content: center; /* Wyśrodkowanie poziome */
+    align-items: center; /* Wyśrodkowanie pionowe */
+    width: 100%; /* Zajmuje całą szerokość */
+    height: auto; /* Dopasowuje się do zawartości */
+    cursor: pointer; /* Pokazuje, że jest klikalne */
     background: none; /* Usuwa tło */
-    border: none; /* Usuwa ewentualne obramowanie */
-    text-align: center; /* Wyśrodkowuje zawartość */
+    border: none; /* Usuwa obramowanie */
+    text-align: center; /* Środek */
+    padding: 10px 0; /* Dystans od góry/dół */
 }
 
 .discord .inner_grid {
-    width: 100%; /* Dopasowuje szerokość kontenera do zawartości */
-    display: flex; /* Flexbox do wyśrodkowania obrazka */
-    justify-content: center; /* Wyśrodkowanie w poziomie */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px; /* Ogranicza max szerokość na dużych ekranach */
 }
 
 .discord img {
-    max-width: 100%; /* Maksymalna szerokość GIF-a do 100% szerokości kontenera */
-    height: auto; /* Zachowanie proporcji GIF-a */
+    width: 100%; /* Dopasowanie do szerokości kontenera */
+    height: auto; /* Zachowanie proporcji */
+    max-height: 250px; /* Ogranicza wysokość na dużych ekranach */
+    object-fit: contain; /* Zapobiega dziwnemu rozciąganiu */
 }
 
-.discord_text {
-    display: none; /* Ukrywa tekst */
+/* 📱 Responsywność: poprawki na małe ekrany */
+@media (max-width: 768px) {
+    .discord img {
+        max-height: 180px; /* Mniejsza wysokość na telefonach */
+    }
+}
+
+@media (max-width: 480px) {
+    .discord img {
+        max-height: 150px; /* Jeszcze mniejsza na bardzo małych ekranach */
+    }
 }
