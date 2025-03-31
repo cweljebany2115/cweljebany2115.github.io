@@ -568,42 +568,43 @@ a {
     background-color: #333;
     color: white;
 }
+
 .discord {
-    display: flex; /* Flexbox do lepszego zarządzania */
-    justify-content: center; /* Wyśrodkowanie poziome */
-    align-items: center; /* Wyśrodkowanie pionowe */
-    width: 100%; /* Zajmuje całą szerokość */
-    height: auto; /* Dopasowuje się do zawartości */
-    cursor: pointer; /* Pokazuje, że jest klikalne */
-    background: none; /* Usuwa tło */
-    border: none; /* Usuwa obramowanie */
-    text-align: center; /* Środek */
-    padding: 10px 0; /* Dystans od góry/dół */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: center;
+    padding: 10px 0;
 }
 
 .discord .inner_grid {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 800px; /* Ogranicza max szerokość na dużych ekranach */
+    max-width: 800px; /* Maksymalna szerokość banera */
 }
 
 .discord img {
-    width: 100%; /* Dopasowanie do szerokości kontenera */
+    width: 100%; /* Baner dopasowuje się do szerokości ekranu */
     height: auto; /* Zachowanie proporcji */
-    max-height: 250px; /* Ogranicza wysokość na dużych ekranach */
-    object-fit: contain; /* Zapobiega dziwnemu rozciąganiu */
+    max-height: 30vh; /* Ogranicza wysokość do 30% wysokości ekranu */
+    object-fit: contain; /* Zapobiega rozciąganiu */
 }
 
-/* 📱 Responsywność: poprawki na małe ekrany */
+/* 📱 RESPONSYWNOŚĆ: Dostosowanie na telefonach */
 @media (max-width: 768px) {
     .discord img {
-        max-height: 180px; /* Mniejsza wysokość na telefonach */
+        max-height: 25vh; /* Zmniejsza baner na telefonach */
     }
 }
 
 @media (max-width: 480px) {
     .discord img {
-        max-height: 150px; /* Jeszcze mniejsza na bardzo małych ekranach */
+        max-height: 20vh; /* Jeszcze mniejszy na bardzo małych ekranach */
     }
 }
