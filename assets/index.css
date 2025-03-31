@@ -569,47 +569,60 @@ a {
     color: white;
 }
 
+.go {
+    display: inline-block; /* Dzięki temu przycisk działa poprawnie */
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: var(--main-color);
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* 📌 Dostosowanie dla banera Discord */
 .discord {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-height: 200px; /* Ogranicza wysokość, żeby nie wymuszał przewijania */
-    overflow: hidden; /* Ukrywa wszystko, co wychodzi poza obszar */
+    max-width: 800px;
+    margin: 0 auto;
+    cursor: pointer;
+    overflow: hidden; /* Usuwa przewijanie ekranu */
     padding: 10px 0;
 }
 
 .discord .inner_grid {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 800px;
 }
 
 .discord img {
-    width: 100%; /* Dopasowuje szerokość do ekranu */
-    height: auto; /* Zapewnia proporcje */
-    max-height: 200px; /* Ogranicza maksymalną wysokość */
+    width: 100%; /* Dopasowanie do szerokości */
+    height: auto; /* Zachowanie proporcji */
+    max-height: 180px; /* Ogranicza wysokość */
     object-fit: contain; /* Zapobiega dziwnemu rozciąganiu */
 }
 
-/* 📱 RESPONSYWNOŚĆ - dopasowanie na telefonie */
+/* 📱 Naprawa na telefonach */
 @media (max-width: 768px) {
-    .discord {
-        max-height: 150px; /* Mniejszy banner na telefonie */
-    }
-    
     .discord img {
-        max-height: 150px;
+        max-height: 140px; /* Mniejszy na telefonach */
     }
 }
 
 @media (max-width: 480px) {
-    .discord {
-        max-height: 120px; /* Jeszcze mniejszy banner na bardzo małych ekranach */
-    }
-
     .discord img {
-        max-height: 120px;
+        max-height: 100px; /* Jeszcze mniejszy na małych ekranach */
     }
+}
+
+/* 🚀 Usunięcie przewijania ekranu */
+html, body {
+    overflow-x: hidden;
 }
