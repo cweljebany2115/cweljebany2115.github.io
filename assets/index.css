@@ -15,51 +15,57 @@
     margin-bottom: 70px;
     font-size: 13px;
 }
-.discord {
+
+.discord{
     margin-bottom: 50px;
     cursor: pointer;
     position: relative;
-    width: 90%;
-    max-width: 600px; 
-    height: 50px; 
-    border-radius: 10px;
-    transition: 200ms;
+    width: 100%; /* Przycisk wypełnia całą szerokość kontenera */
+    height: 50px; /* Wysokość przycisku */
+    background-color: #0d93ec; /* Niebieskie tło */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    transition: 200ms; /* Płynne przejście przy najechaniu */
     margin-left: auto;
     margin-right: auto;
     margin-top: -5px;
-    box-shadow: 0px 0px 20px rgb(153, 153, 153);
-    background: url("assets/images/bnr.gif") center/cover no-repeat; /* Tylko lokalna ścieżka */
+    box-shadow: 0px 0px 20px rgb(153, 153, 153); /* Cień przycisku */
 }
 
-.discord:hover {
-    opacity: 0.7;
+.discord:hover{
+    opacity: 0.7; /* Przycisk staje się przezroczysty przy najechaniu */
 }
 
-.inner_grid {
+.inner_grid{
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: grid;
+    width: max-content;
+    height: max-content;
+    grid-template-columns: max-content max-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.discord_text {
+.discord_text{
+    margin-top: auto;
+    margin-bottom: auto;
     color: white;
     font-size: 20px;
     font-weight: 600;
     text-align: center;
     line-height: 50px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-
-.discord_image {
-    display: none;
+.discord_image{
+    width: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
 }
 
 }
