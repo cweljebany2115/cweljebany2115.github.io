@@ -574,11 +574,8 @@ a {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
-    cursor: pointer;
-    background: none;
-    border: none;
-    text-align: center;
+    max-height: 200px; /* Ogranicza wysokość, żeby nie wymuszał przewijania */
+    overflow: hidden; /* Ukrywa wszystko, co wychodzi poza obszar */
     padding: 10px 0;
 }
 
@@ -586,25 +583,33 @@ a {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 800px; /* Maksymalna szerokość banera */
+    max-width: 800px;
 }
 
 .discord img {
-    width: 100%; /* Baner dopasowuje się do szerokości ekranu */
-    height: auto; /* Zachowanie proporcji */
-    max-height: 30vh; /* Ogranicza wysokość do 30% wysokości ekranu */
-    object-fit: contain; /* Zapobiega rozciąganiu */
+    width: 100%; /* Dopasowuje szerokość do ekranu */
+    height: auto; /* Zapewnia proporcje */
+    max-height: 200px; /* Ogranicza maksymalną wysokość */
+    object-fit: contain; /* Zapobiega dziwnemu rozciąganiu */
 }
 
-/* 📱 RESPONSYWNOŚĆ: Dostosowanie na telefonach */
+/* 📱 RESPONSYWNOŚĆ - dopasowanie na telefonie */
 @media (max-width: 768px) {
+    .discord {
+        max-height: 150px; /* Mniejszy banner na telefonie */
+    }
+    
     .discord img {
-        max-height: 25vh; /* Zmniejsza baner na telefonach */
+        max-height: 150px;
     }
 }
 
 @media (max-width: 480px) {
+    .discord {
+        max-height: 120px; /* Jeszcze mniejszy banner na bardzo małych ekranach */
+    }
+
     .discord img {
-        max-height: 20vh; /* Jeszcze mniejszy na bardzo małych ekranach */
+        max-height: 120px;
     }
 }
