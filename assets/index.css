@@ -15,11 +15,27 @@
     margin-bottom: 70px;
     font-size: 13px;
 }
-
-
+.discord {
+    margin-bottom: 50px;
+    cursor: pointer;
+    position: relative;
+    width: 90%;
+    max-width: 400px; /* Żeby nie był za szeroki */
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    border-radius: 10px;
+    transition: 200ms;
+    margin-top: -5px;
+    box-shadow: 0px 0px 20px rgb(153, 153, 153);
+    background: url("assets/images/bnr.gif") center/cover no-repeat; /* Baner jako tło */
 }
 
-.inner_grid{
+.discord:hover {
+    opacity: 0.7;
+}
+
+.inner_grid {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -27,15 +43,26 @@
     right: 0;
     margin-top: auto;
     margin-bottom: auto;
-    display: grid;
-    width: max-content;
-    height: max-content;
-    grid-template-columns: max-content max-content;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
-;
+.discord_text {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.discord_image {
+    display: none; /* Ukrywamy starą ikonkę, bo teraz tłem jest baner */
+}
+
 }
 
 html{
@@ -582,47 +609,3 @@ a {
     text-decoration: none;
 }
 
-/* 📌 Dostosowanie dla banera Discord */
-.discord {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    cursor: pointer;
-    overflow: hidden; /* Usuwa przewijanie ekranu */
-    padding: 10px 0;
-}
-
-.discord .inner_grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.discord img {
-    width: 100%; /* Dopasowanie do szerokości */
-    height: auto; /* Zachowanie proporcji */
-    max-height: 180px; /* Ogranicza wysokość */
-    object-fit: contain; /* Zapobiega dziwnemu rozciąganiu */
-}
-
-/* 📱 Naprawa na telefonach */
-@media (max-width: 768px) {
-    .discord img {
-        max-height: 140px; /* Mniejszy na telefonach */
-    }
-}
-
-@media (max-width: 480px) {
-    .discord img {
-        max-height: 100px; /* Jeszcze mniejszy na małych ekranach */
-    }
-}
-
-/* 🚀 Usunięcie przewijania ekranu */
-html, body {
-    overflow-x: hidden;
-}
