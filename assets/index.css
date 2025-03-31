@@ -5,7 +5,7 @@
     --error-color: rgb(206, 29, 29);
 }
 
-
+/**Styling**/
 
 .warning{
     width: 90%;
@@ -20,19 +20,19 @@
     margin-bottom: 50px;
     cursor: pointer;
     position: relative;
-    width: 100%; /* Przycisk wypełnia całą szerokość kontenera */
-    height: 50px; /* Wysokość przycisku */
-    background-color: #0d93ec; /* Niebieskie tło */
-    border-radius: 10px; /* Zaokrąglone rogi */
-    transition: 200ms; /* Płynne przejście przy najechaniu */
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
+    height: 50px;
+    background-color: #0d93ec;
+    border-radius: 10px;
+    transition: 200ms;
     margin-top: -5px;
-    box-shadow: 0px 0px 20px rgb(153, 153, 153); /* Cień przycisku */
+    box-shadow: 0px 0px 20px rgb(153, 153, 153);
 }
 
 .discord:hover{
-    opacity: 0.7; /* Przycisk staje się przezroczysty przy najechaniu */
+    opacity: 0.5;
 }
 
 .inner_grid{
@@ -55,6 +55,7 @@
     margin-top: auto;
     margin-bottom: auto;
     color: white;
+    height: max-content;
     font-size: 20px;
     font-weight: 600;
     text-align: center;
@@ -66,8 +67,6 @@
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 10px;
-}
-
 }
 
 html{
@@ -582,35 +581,4 @@ input:focus{
         rotate: 360deg;
     }
 
-body {
-    background-color: #121212;
-    color: white;
 }
-
-/* Możesz także dostosować inne elementy, jak np. nagłówki czy linki */
-h1, h2, h3, h4, h5, h6 {
-    color: white;
-}
-
-a {
-    color: #f1f1f1;
-}
-
-.button {
-    background-color: #333;
-    color: white;
-}
-
-.go {
-    display: inline-block; /* Dzięki temu przycisk działa poprawnie */
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    background: var(--main-color);
-    border-radius: 10px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
